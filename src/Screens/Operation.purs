@@ -3,7 +3,7 @@ module Nav.Operation where
 import Prelude
 
 import Nav (Nav, push)
-import Nav.Types (AppRoutes, appR)
+import Nav.Types (AppRoutes, Operation(..), appR)
 import React.Basic (Component, ReactComponent, createComponent, toReactComponent)
 import React.Basic.Events (handler_)
 import React.Basic.Native as RN
@@ -28,5 +28,3 @@ operation = toReactComponent identity component { render }
             { operation: Multiply }
         }
       ]
-
-data Operation = Add | Multiply

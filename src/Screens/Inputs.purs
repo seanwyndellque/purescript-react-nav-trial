@@ -5,8 +5,7 @@ import Prelude
 import Data.Int (fromString)
 import Data.Maybe (fromMaybe)
 import Nav (Nav, getParam, push)
-import Nav.Operation (Operation(..))
-import Nav.Types (AppRoutes, appR)
+import Nav.Types (AppRoutes, appR, Operation(..))
 import React.Basic (Component, ReactComponent, createComponent, toReactComponent)
 import React.Basic.Events (handler_)
 import React.Basic.Native as RN
