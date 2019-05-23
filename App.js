@@ -7,6 +7,8 @@ import { operation } from './output/Nav.Operation';
 import { inputs } from './output/Nav.Inputs';
 import { answer } from './output/Nav.Answer';
 
+import { app } from './output/Nav.App';
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
@@ -109,7 +111,7 @@ const AppNavigator = createStackNavigator({
   Answer: answer,
 });
 
-export default createAppContainer(AppNavigator);
+export default app;
 
 const styles = StyleSheet.create({
   container: {

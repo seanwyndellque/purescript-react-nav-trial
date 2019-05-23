@@ -18,12 +18,12 @@ operation = toReactComponent identity component { render }
       [ RN.text_ [ RN.string "Operation" ]
       , RN.button
         { title: "add"
-        , onPress: handler_ $ push self.props.navigation "Inputs"
+        , onPress: handler_ $ push self.props.navigation "inputs"
           { operation: Add }
         }
       , RN.button
         { title: "multiply"
-        , onPress: handler_ $ push self.props.navigation "Inputs"
+        , onPress: handler_ $ push self.props.navigation "inputs"
             { operation: Multiply }
         }
       ]

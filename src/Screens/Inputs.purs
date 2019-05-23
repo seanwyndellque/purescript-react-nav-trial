@@ -32,7 +32,7 @@ inputs = toReactComponent identity component { initialState, render }
         }
       , RN.button
         { title: "submit"
-        , onPress: handler_ $ push self.props.navigation "Answer"
+        , onPress: handler_ $ push self.props.navigation "answer"
             { answer: solve (getParam self.props.navigation "operation") self.state.a self.state.b}
         }
       ]
