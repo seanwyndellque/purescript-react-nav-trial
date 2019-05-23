@@ -1,16 +1,16 @@
 module Nav.Types where
 
-import Prelude
+import Data.Symbol (SProxy(..))
 
 type AppRoutes =
-  ( operation :: Unit
-  , inputs :: Unit
-  , answer :: Unit
+  ( operation :: SProxy "operation"
+  , inputs :: SProxy "inputs"
+  , answer :: SProxy "answer"
   )
 
 appR :: Record AppRoutes
 appR =
-  { operation: unit
-  , inputs: unit
-  , answer: unit
+  { operation: SProxy
+  , inputs: SProxy
+  , answer: SProxy
   }
