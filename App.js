@@ -3,6 +3,10 @@ import { Button, Platform, StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { TextInput } from 'react-native-gesture-handler';
 
+import { operation } from './output/Nav.Operation';
+import { inputs } from './output/Nav.Inputs';
+import { answer } from './output/Nav.Answer';
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
@@ -100,9 +104,9 @@ class Answer extends Component {
 }
 
 const AppNavigator = createStackNavigator({
-  Operation,
-  Inputs,
-  Answer,
+  Operation: operation,
+  Inputs: inputs,
+  Answer: answer,
 });
 
 export default createAppContainer(AppNavigator);
