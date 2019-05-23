@@ -22,7 +22,7 @@ exports._getParam = function(nav) {
   };
 };
 
-exports.createStackNavigator = function(routes) {
+exports._createStackNavigator = function(routes) {
   return rnav.createStackNavigator(routes);
 };
 
