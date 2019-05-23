@@ -2,7 +2,7 @@ module Nav.Answer where
 
 import Prelude
 
-import Nav (Nav, getParam, popToTop)
+import Nav (Nav, getParamData, popToTop)
 import Nav.Types (AppRoutes)
 import React.Basic (Component, ReactComponent, createComponent, toReactComponent)
 import React.Basic.Events (handler_)
@@ -17,7 +17,7 @@ answer = toReactComponent identity component { render }
     render self =
       RN.view_
       [ RN.text_ [ RN.string "Answer" ]
-      , RN.text_ [ RN.string (getParam self.props.navigation "answer") ]
+      , RN.text_ [ RN.string (getParamData self.props.navigation) ]
       , RN.button
         { title: "Back to top"
         , onPress: handler_ $ popToTop self.props.navigation

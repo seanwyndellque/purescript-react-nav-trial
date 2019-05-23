@@ -16,7 +16,7 @@ exports.popToTop = function(nav) {
   };
 };
 
-exports.getParam = function(nav) {
+exports._getParam = function(nav) {
   return function(name) {
     return nav.getParam(name);
   };

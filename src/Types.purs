@@ -1,13 +1,15 @@
 module Nav.Types where
 
+import Prelude
+
 data Route (name :: Symbol) param = Route
 
 data Operation = Add | Multiply
 
 type AppRoutes =
-  ( operation :: Route "operation" {}
-  , inputs :: Route "inputs" { operation :: Operation }
-  , answer :: Route "answer" { answer :: Int }
+  ( operation :: Route "operation" Unit
+  , inputs :: Route "inputs" Operation
+  , answer :: Route "answer" Int
   )
 
 appR :: Record AppRoutes

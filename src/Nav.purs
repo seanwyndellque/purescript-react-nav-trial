@@ -10,14 +10,17 @@ import React.Basic (ReactComponent)
 
 foreign import data Nav :: #Type -> Type
 
-foreign import _push :: forall param routes. Nav routes -> String -> param -> Effect Unit
+foreign import _push :: forall paramR routes. Nav routes -> String -> Record paramR -> Effect Unit
 
 push :: forall param routes sym typ r2. IsSymbol sym => Row.Cons sym typ r2 routes => Nav routes -> Route sym param -> param -> Effect Unit
-push nav route param = _push nav (reflectSymbol (SProxy :: SProxy sym)) param
+push nav route param = _push nav (reflectSymbol (SProxy :: SProxy sym)) { value: param }
 
 foreign import popToTop :: forall routes. Nav routes -> Effect Unit
 
-foreign import getParam :: forall a routes. Nav routes -> String -> a
+foreign import _getParam :: forall a routes. Nav routes -> String -> a
+
+getParamData :: forall a routes. Nav routes -> a
+getParamData nav = (_getParam nav "value")
 
 foreign import createStackNavigator :: forall routes a. a -> ReactComponent { navigation :: Nav routes }
 

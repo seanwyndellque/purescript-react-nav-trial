@@ -4,7 +4,7 @@ import Prelude
 
 import Data.Int (fromString)
 import Data.Maybe (fromMaybe)
-import Nav (Nav, getParam, push)
+import Nav (Nav, getParamData, push)
 import Nav.Types (AppRoutes, appR, Operation(..))
 import React.Basic (Component, ReactComponent, createComponent, toReactComponent)
 import React.Basic.Events (handler_)
@@ -32,8 +32,8 @@ inputs = toReactComponent identity component { initialState, render }
         }
       , RN.button
         { title: "submit"
-        , onPress: handler_ $ push self.props.navigation appR.answer
-            { answer: solve (getParam self.props.navigation "operation") self.state.a self.state.b}
+        , onPress: handler_ $ push self.props.navigation appR.answer $
+            solve (getParamData self.props.navigation) self.state.a self.state.b
         }
       ]
 
