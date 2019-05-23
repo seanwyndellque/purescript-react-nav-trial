@@ -1,0 +1,10 @@
+dependencies: \
+  /Users/seanwyndellque/Zap/nav/node_modules/react-native/Libraries/Network/RCTFileRequestHandler.m \
+  /Users/seanwyndellque/Zap/nav/node_modules/react-native/Libraries/Network/RCTFileRequestHandler.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTURLRequestHandler.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTURLRequestDelegate.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h

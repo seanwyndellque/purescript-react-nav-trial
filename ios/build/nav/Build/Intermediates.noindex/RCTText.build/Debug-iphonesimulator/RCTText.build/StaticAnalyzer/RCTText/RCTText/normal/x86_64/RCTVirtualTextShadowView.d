@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/seanwyndellque/Zap/nav/node_modules/react-native/Libraries/Text/VirtualText/RCTVirtualTextShadowView.m \
+  /Users/seanwyndellque/Zap/nav/node_modules/react-native/Libraries/Text/VirtualText/RCTVirtualTextShadowView.h \
+  /Users/seanwyndellque/Zap/nav/node_modules/react-native/Libraries/Text/BaseText/RCTBaseTextShadowView.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTLayout.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/yoga/YGValue.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/seanwyndellque/Zap/nav/node_modules/react-native/Libraries/Text/RCTTextAttributes.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/seanwyndellque/Zap/nav/node_modules/react-native/Libraries/Text/RCTTextTransform.h \
+  /Users/seanwyndellque/Zap/nav/ios/build/nav/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView+Layout.h \
+  /Users/seanwyndellque/Zap/nav/node_modules/react-native/Libraries/Text/RawText/RCTRawTextShadowView.h
