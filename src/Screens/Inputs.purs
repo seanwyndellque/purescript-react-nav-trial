@@ -4,17 +4,17 @@ import Prelude
 
 import Data.Int (fromString)
 import Data.Maybe (fromMaybe)
-import Nav (Nav, getParamData, push)
+import Nav (Nav, push)
 import Nav.Types (AppRoutes, appR, Operation(..))
-import React.Basic (Component, ReactComponent, createComponent, toReactComponent)
+import React.Basic (Component, JSX, createComponent, make)
 import React.Basic.Events (handler_)
 import React.Basic.Native as RN
 
-component :: Component { navigation :: Nav AppRoutes }
+component :: Component {}
 component = createComponent "Inputs"
 
-inputs :: ReactComponent { navigation :: Nav AppRoutes }
-inputs = toReactComponent identity component { initialState, render }
+inputs :: Nav AppRoutes -> Operation -> JSX
+inputs nav op = make component { initialState, render } {}
   where
     initialState =
       { a: "2"
@@ -32,11 +32,11 @@ inputs = toReactComponent identity component { initialState, render }
         }
       , RN.button
         { title: "submit"
-        , onPress: handler_ $ push self.props.navigation appR.answer $
-            solve (getParamData self.props.navigation) self.state.a self.state.b
+        , onPress: handler_ $ push nav appR.answer $
+            solve self.state.a self.state.b
         }
       ]
 
-    solve op a b = case op of
+    solve a b = case op of
       Add -> (fromMaybe 0 (fromString a)) + (fromMaybe 0 (fromString b))
       Multiply -> (fromMaybe 0 (fromString a)) * (fromMaybe 0 (fromString b))

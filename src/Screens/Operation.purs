@@ -4,25 +4,20 @@ import Prelude
 
 import Nav (Nav, push)
 import Nav.Types (AppRoutes, Operation(..), appR)
-import React.Basic (Component, ReactComponent, createComponent, toReactComponent)
+import React.Basic (JSX)
 import React.Basic.Events (handler_)
 import React.Basic.Native as RN
 
-component :: Component { navigation :: Nav AppRoutes }
-component = createComponent "Operation"
-
-operation :: ReactComponent { navigation :: Nav AppRoutes }
-operation = toReactComponent identity component { render }
-  where
-    render self =
-      RN.view_
-      [ RN.text_ [ RN.string "Operation" ]
-      , RN.button
-        { title: "add"
-        , onPress: handler_ $ push self.props.navigation appR.inputs Add
-        }
-      , RN.button
-        { title: "multiply"
-        , onPress: handler_ $ push self.props.navigation appR.inputs Multiply
-        }
-      ]
+operation :: Nav AppRoutes -> Unit -> JSX
+operation nav _ =
+  RN.view_
+  [ RN.text_ [ RN.string "Operation" ]
+  , RN.button
+    { title: "add"
+    , onPress: handler_ $ push nav appR.inputs Add
+    }
+  , RN.button
+    { title: "multiply"
+    , onPress: handler_ $ push nav appR.inputs Multiply
+    }
+  ]
