@@ -1,6 +1,6 @@
 var rnav = require('react-navigation');
 
-exports.push = function(nav) {
+exports._push = function(nav) {
   return function(route) {
     return function(params) {
       return function() {

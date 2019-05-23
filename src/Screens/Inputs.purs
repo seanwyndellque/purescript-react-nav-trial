@@ -4,16 +4,18 @@ import Prelude
 
 import Data.Int (fromString)
 import Data.Maybe (fromMaybe)
+import Data.Symbol (SProxy(..))
 import Nav (Nav, getParam, push)
 import Nav.Operation (Operation(..))
+import Nav.Types (AppRoutes)
 import React.Basic (Component, ReactComponent, createComponent, toReactComponent)
 import React.Basic.Events (handler_)
 import React.Basic.Native as RN
 
-component :: Component { navigation :: Nav }
+component :: Component { navigation :: Nav AppRoutes }
 component = createComponent "Inputs"
 
-inputs :: ReactComponent { navigation :: Nav }
+inputs :: ReactComponent { navigation :: Nav AppRoutes }
 inputs = toReactComponent identity component { initialState, render }
   where
     initialState =
@@ -32,7 +34,7 @@ inputs = toReactComponent identity component { initialState, render }
         }
       , RN.button
         { title: "submit"
-        , onPress: handler_ $ push self.props.navigation "answer"
+        , onPress: handler_ $ push self.props.navigation (SProxy :: SProxy "answer")
             { answer: solve (getParam self.props.navigation "operation") self.state.a self.state.b}
         }
       ]
