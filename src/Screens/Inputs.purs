@@ -2,14 +2,13 @@ module Nav.Inputs where
 
 import Prelude
 
-import Effect.Class.Console (log)
-import Effect.Uncurried (mkEffectFn1)
+import Data.Int (fromString)
+import Data.Maybe (fromMaybe)
+import Nav (Nav, getParam, push)
+import Nav.Operation (Operation(..))
 import React.Basic (Component, ReactComponent, createComponent, toReactComponent)
 import React.Basic.Events (handler_)
 import React.Basic.Native as RN
-import Web.DOM.Document (createComment)
-
-foreign import data Nav :: Type
 
 component :: Component { navigation :: Nav }
 component = createComponent "Inputs"
@@ -33,6 +32,11 @@ inputs = toReactComponent identity component { initialState, render }
         }
       , RN.button
         { title: "submit"
-        , onPress: handler_ $ log (self.state.a <> self.state.b)
+        , onPress: handler_ $ push self.props.navigation "Answer"
+            { answer: solve (getParam self.props.navigation "operation") self.state.a self.state.b}
         }
       ]
+
+    solve op a b = case op of
+      Add -> (fromMaybe 0 (fromString a)) + (fromMaybe 0 (fromString b))
+      Multiply -> (fromMaybe 0 (fromString a)) * (fromMaybe 0 (fromString b))
